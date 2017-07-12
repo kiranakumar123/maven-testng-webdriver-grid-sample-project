@@ -1,0 +1,22 @@
+<suite name="webdriver suite" verbose="1">
+  <test name="webdriver Test">
+    <groups>
+      <define name="include-group">
+        <include name="WebDriverTestGroup_Pass_One" />
+        <include name="WebDriverTestGroup_Pass_Two" />
+        <include name="WebDriverTestGroup_Fail_One" />
+      </define>
+      <define name="exclude-group">
+        <include name="test-one-exclude" />
+        <include name="test-two-exclude" />
+      </define>
+      <run>
+        <include name="include-group" />
+        <exclude name="exclude-group" />
+      </run>
+    </groups>
+    <classes>
+      <class name="com.test.listener.MavenTestNG.WebDriverTest" />
+    </classes>
+  </test>
+ </suite>
